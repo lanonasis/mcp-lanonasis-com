@@ -1,0 +1,63 @@
+[build]
+  functions = "netlify/functions"
+  publish = "src/static"
+
+[functions]
+  node_bundler = "esbuild"
+
+# API routes (highest priority)
+[[redirects]]
+  from = "/api/mcp/*"
+  to = "/.netlify/functions/mcp"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/mcp"
+  to = "/.netlify/functions/mcp"
+  status = 200
+  force = true
+
+# SSE endpoint
+[[redirects]]
+  from = "/sse"
+  to = "/.netlify/functions/mcp-sse"
+  status = 200
+  force = true
+
+# CLI Auth routes
+[[redirects]]
+  from = "/api/cli-auth/*"
+  to = "/.netlify/functions/cli-auth"
+  status = 200
+  force = true
+
+# OAuth routes  
+[[redirects]]
+  from = "/oauth/*"
+  to = "/.netlify/functions/cli-auth"
+  status = 200
+  force = true
+
+# All other API routes go to main API function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
+
+# Serve MCP auth page for root
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/mcp"
+  status = 200
+  force = true
+  
+# SPA fallback for other routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "18"

@@ -1,0 +1,19 @@
+# MCP API Routes - Route to Netlify Functions
+/api/mcp/* /.netlify/functions/mcp 200
+/api/mcp /.netlify/functions/mcp 200
+
+# CLI Auth Routes
+/api/cli-auth/* /.netlify/functions/cli-auth 200
+/oauth/* /.netlify/functions/cli-auth 200
+
+# SSE Route
+/sse /.netlify/functions/mcp-sse 200
+
+# API Routes to main API function
+/api/* /.netlify/functions/api 200
+
+# Test endpoint
+/test /.netlify/functions/test 200
+
+# Default route - all other requests serve the React app
+/* /index.html 200

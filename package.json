@@ -1,5 +1,5 @@
 {
-  "name": "@lanonasis/memory-service-maas",
+  "name": "@lanonasis/mcp-service",
   "version": "1.2.0-dev",
   "description": "[DEVELOPMENT] Enterprise Memory as a Service (MaaS) with API Key Management and MCP Integration",
   "main": "dist/server.js",

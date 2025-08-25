@@ -163,7 +163,7 @@ const allowedOrigins = process.env.NODE_ENV === 'production'
       'https://dashboard.lanonasis.com', 
       'https://mcp.lanonasis.com',
       'https://docs.lanonasis.com',
-      'https://api.vortexai.io',
+      'https://api.lanonasis.com',
       'https://gateway.apiendpoint.net',
       'https://onasis.io',
       'https://connectionpoint.tech',

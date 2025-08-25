@@ -15,8 +15,8 @@ export const routingConfig: RoutingConfig = {
   // Enable unified router for privacy-protected routing
   useUnifiedRouter: process.env.USE_UNIFIED_ROUTER === 'true' || process.env.NODE_ENV === 'production',
   
-  // VPS unified router endpoints
-  unifiedRouterUrl: process.env.UNIFIED_ROUTER_URL || 'https://api.vortexai.io',
+  // Central Onasis-core unified router endpoints
+  unifiedRouterUrl: process.env.UNIFIED_ROUTER_URL || 'https://api.lanonasis.com',
   
   // Fallback to direct Supabase if unified router fails
   fallbackToDirectSupabase: true,

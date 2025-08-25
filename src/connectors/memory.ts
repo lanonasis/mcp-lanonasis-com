@@ -42,7 +42,7 @@ export class MemoryConnector {
     this.useUnifiedRouter = process.env.USE_UNIFIED_ROUTER === 'true' || process.env.NODE_ENV === 'production';
     
     if (this.useUnifiedRouter) {
-      this.apiUrl = process.env.UNIFIED_ROUTER_URL || 'https://api.vortexai.io';
+      this.apiUrl = process.env.UNIFIED_ROUTER_URL || 'https://api.lanonasis.com';
     } else {
       this.apiUrl = options.apiUrl || process.env.MEMORY_API_URL || 'http://localhost:3000';
     }
